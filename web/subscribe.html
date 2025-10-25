@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Subscribe</title>
+</head>
+<body onload="getUser()">
+    <div id="userwelcome"></div>
+    <h1>Subscribe (1/5)</h1>
+    <p>Get 500 subscribers after subscribing to 5 channels.</p>
+    <hr>
+    <h2>Richard2321</h2>
+    <p>I am Richard! Please subscribe.</p>
+    <a href="https://www.youtube.com/watch?v=xvFZjo5PgG0"><button>Subscribe</button></a>
+    <script>
+        function getUser() {
+            const urlParams = new URLSearchParams(window.location.search);
+            const user = urlParams.get('user');
+            if (user === null) {
+                window.location.href = "index.html";
+            } else {
+                userwelcome.innerText = "Welcome, " + user + "!" + " You have been logged in.";
+            }
+        }
+    </script>
+</body>
+</html>

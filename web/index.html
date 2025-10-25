@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Free Instant Subscribers</title>
+    <style>
+        header {
+            text-align: left;
+            display: flex; 
+            flex-direction: row; 
+            align-items: left;
+        }
+    </style>
+</head>
+<body>
+    <header><h1>Free Instant Subscribers</h1><p>Get free subscribers NOW!</p></header>
+    <p>First you have to login. Click the button below.</p>
+    <label>Username:</label>
+    <input id="user"></input>
+    <button onclick="redirect()">Login</button>
+    <script>
+        function redirect() {
+            const username = document.getElementById("user").value;
+            window.location.href = "subscribe.html?user=" + username;
+        }
+    </script>
+</body>
+</html>
